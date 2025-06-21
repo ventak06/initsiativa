@@ -1,0 +1,677 @@
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 120px;
+    background: linear-gradient(rgba(138, 43, 226, 0.1), rgba(138, 43, 226, 0.05));
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #ff7b1a;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--purple);
+    margin-bottom: 3rem;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-item .number {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--orange);
+    margin-bottom: 0.5rem;
+}
+
+.stat-item .label {
+    font-size: 1.3rem;
+    color: var(--purple);
+    text-align: center;
+    max-width: 200px;
+}
+
+.directions {
+    position: relative;
+    z-index: 2;
+    padding: 0;
+    margin-top: -100px;
+}
+
+.directions h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 4.5rem; /* Увеличили размер заголовка */
+    margin-bottom: 100px; /* Увеличили отступ после заголовка */
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.directions-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px; /* Увеличили расстояние между карточками */
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 0 20px 100px; /* Добавили отступ снизу */
+}
+
+.direction-card {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    padding: 60px 40px; /* Увеличили внутренние отступы */
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 500px; /* Увеличили минимальную высоту */
+}
+
+.direction-card:hover {
+    transform: translateY(-15px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.direction-card img {
+    width: 120px; /* Увеличили размер иконок */
+    height: 120px;
+    margin-bottom: 40px;
+    filter: brightness(0) invert(1);
+}
+
+.direction-card h3 {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    font-size: 2.8rem; /* Увеличили размер заголовка */
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.direction-card p {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    font-size: 1.8rem; /* Увеличили размер текста */
+    line-height: 1.6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.features {
+    padding: 6rem 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    background: #f8f9fa;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item h3 {
+    margin-bottom: 1rem;
+}
+
+.events {
+    padding: 6rem 0;
+}
+
+.events-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.event-card {
+    background: var(--color-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.event-card h3,
+.event-card p {
+    padding: 1rem;
+    margin: 0;
+}
+
+/* Стили для баннера с наложенными фотографиями */
+.activities-banner {
+    position: relative;
+    min-height: 180vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: var(--white);
+    padding: 0;
+}
+
+.banner-images {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.image-overlay {
+    position: absolute;
+    width: 60%;
+    height: 42%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 6px solid var(--orange);
+    transition: transform 0.3s ease;
+}
+
+.image-overlay.top-image {
+    top: 10%;
+    left: 10%;
+    background-image: url('../img/выступления.jpg');
+    z-index: 1;
+    transform: rotate(-7deg);
+}
+
+.image-overlay.bottom-image {
+    bottom: 10%;
+    right: 10%;
+    background-image: url('../img/общее фото много.jpg');
+    z-index: 2;
+    transform: rotate(5deg);
+}
+
+.image-overlay:hover {
+    transform: scale(1.02);
+}
+
+.banner-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.text-line {
+    position: absolute;
+    font-size: 10rem;
+    font-weight: 900;
+    color: #8b31ffff;
+    line-height: 1;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+}
+
+.text-line::before {
+    content: attr(data-text);
+    position: absolute;
+    left: -6px;
+    top: -6px;
+    width: 100%;
+    height: 100%;
+    color: var(--orange);
+    z-index: -1;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+}
+
+.text-line:first-child {
+    top: 10%;
+    right: 10%;
+}
+
+.text-line:last-child {
+    bottom: 10%;
+    left: 10%;
+}
+
+.press-center {
+    position: relative;
+    min-height: 230vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+}
+
+.press-center h2 {
+    font-size: 9rem;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 2px #FF7B99;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    margin: 0;
+    line-height: 1;
+    text-transform: uppercase;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.press-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.press-event {
+    position: absolute;
+    width: 45%;
+    max-width: 600px;
+}
+
+.press-event:first-child {
+    top: 15%;
+    right: 5%;
+}
+
+.press-event:last-child {
+    bottom: 15%;
+    left: 5%;
+}
+
+.press-event img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 6px solid var(--orange);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.press-event:hover img {
+    transform: scale(1.02);
+}
+
+.event-description {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.event-description h3 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.event-description p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 10px;
+}
+
+.event-date {
+    color: var(--orange);
+    font-size: 14px;
+    display: block;
+}
+
+.press-center .banner-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.press-center .text-line {
+    position: absolute;
+    font-size: 16rem;
+    font-weight: 900;
+    color: white;
+    line-height: 0.8;
+}
+
+.press-center .text-line::before {
+    content: attr(data-text);
+    position: absolute;
+    left: -6px;
+    top: -6px;
+    width: 100%;
+    height: 100%;
+    color: var(--orange);
+    z-index: -1;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+}
+
+.press-center .text-line:first-child {
+    top: 10%;
+    right: 10%;
+    transform: rotate(5deg);
+}
+
+.press-center .text-line:last-child {
+    bottom: 15%;
+    left: 10%;
+    transform: rotate(-5deg);
+}
+
+.memories-wall {
+    position: relative;
+    min-height: 160vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    background: var(--white);
+    padding: 80px 0;
+}
+
+.memories-wall .banner-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.memories-wall .text-line {
+    position: absolute;
+    font-size: 900%; /* Увеличили размер шрифта */
+    font-weight: 80%;
+    color: var(--purple);
+    line-height: 0.2;
+}
+
+.memories-wall .text-line::before {
+    content: attr(data-text);
+    position: absolute;
+    left: -6px;
+    top: -6px;
+    width: 100%;
+    height: 100%;
+    color: var(--orange);
+    z-index: -1;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+}
+
+.memories-wall .text-line:first-child {
+    top: 0%; /* Подняли надпись СТЕНА в самый верх */
+    right: 15%;
+    transform: rotate(5deg);
+    z-index: 1;
+}
+
+.memories-wall .text-line:last-child {
+    top: 85%;
+    left: 15%;
+    transform: rotate(-5deg);
+    z-index: 1;
+}
+
+.memories-grid {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 100px auto 350px; /* Увеличили верхний отступ для контента */
+    padding: 0 20px;
+}
+
+.memory-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.memory-card:hover {
+    transform: translateY(-10px);
+}
+
+.memory-card img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.memory-content {
+    padding: 30px;
+    background: rgba(46, 229, 157, 0.1);
+}
+
+.memory-content h3 {
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.4;
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 100px 0 40px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .directions {
+        padding: 80px 0 120px;
+    }
+
+    .directions h2 {
+        font-size: 3rem;
+        margin-bottom: 60px;
+    }
+
+    .directions-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 20px 60px;
+    }
+
+    .direction-card {
+        min-height: 400px;
+        padding: 40px 30px;
+    }
+
+    .direction-card h3 {
+        font-size: 2.2rem;
+    }
+
+    .direction-card p {
+        font-size: 1.4rem;
+    }
+
+    .directions-grid,
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .events-slider {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-banner {
+        min-height: 80vh;
+    }
+
+    .vertical-text {
+        font-size: 4rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .text-line {
+        font-size: 5rem;
+    }
+    
+    .text-line.indent {
+        margin-left: 4rem;
+    }
+
+    .image-overlay.top-image {
+        width: 70%;
+        height: 35%;
+    }
+
+    .image-overlay.bottom-image {
+        width: 70%;
+        height: 35%;
+    }
+
+    .text-line:first-child {
+        top: 5%;
+        right: 5%;
+    }
+
+    .text-line:last-child {
+        bottom: 5%;
+        left: 5%;
+    }
+
+    .memories-wall h2 {
+        font-size: 4rem;
+    }
+
+    .memory-card img {
+        height: 300px;
+    }
+
+    .memory-content h3 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .directions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+    }
+
+    .direction-card h3 {
+        font-size: 2.4rem;
+    }
+
+    .direction-card p {
+        font-size: 1.6rem;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .press-center {
+        min-height: auto;
+        padding: 100px 0;
+    }
+
+    .press-center h2 {
+        font-size: 8rem;
+    }
+
+    .press-content {
+        margin-top: 120px;
+    }
+
+    .press-event {
+        position: relative;
+        width: 90%;
+        max-width: 500px;
+        margin: 30px auto;
+    }
+
+    .press-event:first-child,
+    .press-event:last-child {
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+    }
+
+    .press-event img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .press-center .text-line {
+        font-size: 8rem;
+    }
+
+    .press-center .text-line:first-child {
+        top: 5%;
+    }
+
+    .press-center .text-line:last-child {
+        bottom: 5%;
+    }
+
+    .event-description {
+        width: 100%;
+        max-width: none;
+    }
+}

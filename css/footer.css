@@ -1,0 +1,145 @@
+.footer {
+    background-color: #f5f5f5;
+    padding: 40px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-info,
+    .footer-contacts,
+    .footer-social {
+        width: 100%;
+    }
+
+    .footer-logo {
+        margin: 0 auto;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer-content {
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .footer-info img {
+        width: 40px;
+    }
+
+    .footer-info p,
+    .footer-contacts p {
+        font-size: 0.9rem;
+    }
+
+    .footer-contacts h4,
+    .footer-social h4 {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .footer-content {
+        gap: 20px;
+    }
+
+    .footer-logo {
+        width: 80px;
+    }
+
+    .footer h4 {
+        font-size: 1.1rem;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.footer-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-info img {
+    width: 50px;
+    height: auto;
+}
+
+.footer-info p {
+    color: #333;
+    font-size: 1rem;
+}
+
+.footer-contacts h4,
+.footer-social h4 {
+    color: #9545ff;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-contacts p {
+    color: #666;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    color: #ff7b1a;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #01e801;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.footer-bottom p {
+    color: #666;
+    font-size: 0.9rem;
+}

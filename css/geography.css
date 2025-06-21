@@ -1,0 +1,274 @@
+.section-map {
+    padding: 0;
+}
+
+.map-container {
+    position: relative;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicks to pass through to the map */
+}
+
+#yandex-map {
+    width: 100%;
+    height: 920px; /* Match the height in the script */
+}.geography-hero {
+    padding-top: 120px;
+    background-color: #f5f5f5;
+}
+
+.geography-hero h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #9545ff;
+}
+
+img {
+  width: 100%;
+  height: 78,8%
+}
+
+.map-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.map-container {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.map-info {
+    flex: 1;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-info h2 {
+    color: #ff7b1a;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.map-info p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--purple);
+}
+
+.regions {
+    padding: 120px 0;
+}
+
+.regions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin: 60px 0;
+}
+
+.region-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.region-card:hover {
+    transform: translateY(-10px);
+}
+
+.region-card h3 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.region-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.region-card li {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.coverage {
+    padding: 80px 0;
+}
+
+.coverage h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2rem;
+    color: #9545ff;
+}
+
+.coverage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.coverage-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.coverage-card:hover {
+    transform: translateY(-10px);
+}
+
+.coverage-number {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--orange);
+    margin-bottom: 15px;
+}
+
+.coverage-card p {
+    font-size: 1.2rem;
+    color: var(--purple);
+}
+
+.partners {
+    padding: 60px 0;
+    background: #f5f5f5;
+}
+
+.partners h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2rem;
+    color: #9545ff;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partner-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+}
+
+.partner-card h3 {
+    color: #01e801;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.partner-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.partner-card li {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .map-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .regions-grid,
+    .coverage-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .map-info {
+        padding: 20px;
+    }
+
+    .map-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .region-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .region-card li {
+        font-size: 1.1rem;
+    }
+
+    .coverage-number {
+        font-size: 3rem;
+    }
+
+    .coverage-card p {
+        font-size: 1.1rem;
+    }
+
+    .partner-card h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .regions-grid,
+    .coverage-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .coverage-grid,
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

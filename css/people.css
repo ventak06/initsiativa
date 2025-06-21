@@ -1,0 +1,744 @@
+.people-hero {
+    padding: 60px 0;
+    background-color: #f5f5f5;
+}
+
+.people-hero h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #9545ff;
+}
+
+.leadership-team,
+.department-leads {
+    margin-bottom: 60px;
+}
+
+.leadership-team h2,
+.department-leads h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #9545ff;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+@media screen and (max-width: 992px) {
+    .team-grid {
+        gap: 30px;
+    }
+
+    .team-member {
+        padding: 25px;
+    }
+
+    .member-photo {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        max-width: 500px;
+    }
+
+    .people-hero h1 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+        padding: 0 15px;
+    }
+
+    .leadership-team h2,
+    .department-leads h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .people-intro-block {
+        flex-direction: column;
+    }
+
+    .people-intro-text {
+        width: 100%;
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .people-intro-image {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .leadership-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .leader-card-v2 {
+        margin-bottom: 20px;
+    }
+
+    .leader-card-v2 img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .leader-surname,
+    .leader-name,
+    .leader-patronymic {
+        font-size: 0.9rem;
+    }
+
+    .leader-detail-card,
+    .activist-detail-card {
+        flex-direction: column;
+        padding: 15px;
+        margin: 15px 10px;
+    }
+
+    .leader-detail-photo {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .leader-detail-photo img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .leader-detail-info {
+        width: 100%;
+    }
+
+    .leader-detail-fio {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .leader-detail-surname,
+    .leader-detail-name,
+    .leader-detail-patronymic {
+        font-size: 1.2rem;
+    }
+
+    .leader-detail-desc p {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .team-grid {
+        gap: 20px;
+    }
+
+    .team-member {
+        padding: 20px;
+    }
+
+    .member-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .people-hero h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .leadership-team h2,
+    .department-leads h2 {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+    }
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.member-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 4px solid #01e801;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.member-info p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.achievements {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.achievements h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+
+.achievement-card {
+    text-align: center;
+    padding: 30px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff7b1a;
+    margin-bottom: 15px;
+}
+
+.achievement-card p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.team-hero {
+    padding-top: 120px;
+    text-align: center;
+}
+
+.team-intro {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.team-intro p {
+    font-size: 1.5rem;
+    color: var(--purple);
+    line-height: 1.6;
+}
+
+.leadership {
+    padding: 120px 0;
+}
+
+.leadership .container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    max-width: 1000px;
+    margin: 60px auto;
+}
+
+.leader-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+.leader-card:hover {
+    transform: translateY(-10px);
+}
+
+.leader-photo {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 30px;
+}
+
+.leader-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--orange);
+}
+
+.leader-info h3 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.leader-info p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+}
+
+.team-leads {
+    padding: 80px 0;
+}
+
+.leads-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.lead-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.lead-card:hover {
+    transform: translateY(-10px);
+}
+
+.lead-photo {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+}
+
+.lead-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--green);
+}
+
+.lead-info h3 {
+    color: var(--orange);
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.lead-info p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.people-intro-block {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.people-intro-text {
+    flex: 1;
+    font-size: 2.2rem;
+    line-height: 1.7;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.people-intro-image {
+    max-width: 700px;
+    border-radius: 40px;
+    flex-shrink: 0;
+}
+
+.leadership h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+}
+
+.leadership-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section.activists .leadership-gallery {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 992px) {
+    .section.activists .leadership-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .section.activists .leadership-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+.leader-card-v2 {
+    background: #9965d3;
+    border-radius: 32px;
+    padding: 35px 28px 28px 28px;
+    width: 280px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.leader-card-v2 img {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 24px;
+    margin-bottom: 18px;
+    object-fit: cover;
+    aspect-ratio: 3/4;
+}
+
+.leader-card-v2 .leader-surname {
+    text-align: center;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.leader-card-v2 .leader-name {
+    text-align: center;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 4px;
+}
+
+.leader-card-v2 .leader-patronymic {
+    text-align: center;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Карточки подробной информации о руководителях */
+.leader-detail-card {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: 32px;
+    box-shadow: 0 4px 24px rgba(153, 101, 211, 0.10);
+    margin: 32px auto 0 auto;
+    max-width: 900px;
+    padding: 36px 40px;
+    gap: 40px;
+    transition: box-shadow 0.3s;
+}
+.leader-detail-card:hover {
+    box-shadow: 0 8px 32px rgba(153, 101, 211, 0.18);
+}
+.leader-detail-photo {
+    flex-shrink: 0;
+    width: 220px;
+    height: 290px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.leader-detail-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+.leader-detail-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.leader-detail-fio {
+    margin-bottom: 18px;
+}
+.leader-detail-surname {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    color: #9545ff;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+.leader-detail-name {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 2px;
+}
+.leader-detail-patronymic {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #666;
+}
+.leader-detail-desc p {
+    font-size: 1.15rem;
+    color: #444;
+    margin-bottom: 6px;
+    font-family: 'Montserrat', sans-serif;
+}
+@media screen and (max-width: 900px) {
+    .leader-detail-card {
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 12px;
+        gap: 20px;
+    }
+    .leader-detail-photo {
+        width: 180px;
+        height: 230px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .leader-detail-card {
+        padding: 12px 4px;
+        border-radius: 18px;
+    }
+    .leader-detail-photo {
+        width: 120px;
+        height: 160px;
+        border-radius: 12px;
+    }
+    .leader-detail-surname {
+        font-size: 1.2rem;
+    }
+    .leader-detail-name {
+        font-size: 1rem;
+    }
+    .leader-detail-patronymic {
+        font-size: 0.9rem;
+    }
+    .leader-detail-desc p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Карточки подробной информации об активистах */
+.activist-detail-card {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: 32px;
+    box-shadow: 0 4px 24px rgba(153, 101, 211, 0.10);
+    margin: 32px auto 0 auto;
+    max-width: 900px;
+    padding: 36px 40px;
+    gap: 40px;
+    transition: box-shadow 0.3s;
+}
+
+.activist-detail-card:hover {
+    box-shadow: 0 8px 32px rgba(153, 101, 211, 0.18);
+}
+
+/* Используем те же стили для фото и информации, что и у руководителей */
+.activist-detail-card .leader-detail-photo {
+    width: 200px;
+    height: 260px;
+}
+
+/* Специфические стили для текста активистов */
+.activist-detail-card .leader-detail-desc p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 900px) {
+    .activist-detail-card {
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 12px;
+        gap: 20px;
+    }
+    
+    .activist-detail-card .leader-detail-photo {
+        width: 160px;
+        height: 210px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .activist-detail-card {
+        padding: 12px 4px;
+        border-radius: 18px;
+    }
+    
+    .activist-detail-card .leader-detail-photo {
+        width: 120px;
+        height: 160px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .people-intro-block {
+        flex-direction: column;
+    }
+
+    .people-intro-text {
+        width: 100%;
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .people-intro-image {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .leadership-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .leader-card-v2 {
+        margin-bottom: 20px;
+    }
+
+    .leader-card-v2 img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .leader-surname,
+    .leader-name,
+    .leader-patronymic {
+        font-size: 0.9rem;
+    }
+
+    .leader-detail-card,
+    .activist-detail-card {
+        flex-direction: column;
+        padding: 15px;
+        margin: 15px 10px;
+    }
+
+    .leader-detail-photo {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .leader-detail-photo img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .leader-detail-info {
+        width: 100%;
+    }
+
+    .leader-detail-fio {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .leader-detail-surname,
+    .leader-detail-name,
+    .leader-detail-patronymic {
+        font-size: 1.2rem;
+    }
+
+    .leader-detail-desc p {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .leadership-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .leader-card-v2 {
+        width: 100%;
+    }
+
+    .leader-detail-photo img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .leader-detail-surname,
+    .leader-detail-name,
+    .leader-detail-patronymic {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        padding: 0 10px;
+    }
+}

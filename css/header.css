@@ -1,0 +1,179 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #FF7B1A;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+body {
+    padding-top: 100px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+}
+
+.logo-text {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Мобильное меню */
+.burger {
+    display: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+@media screen and (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: #FF7B1A;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 20px 0;
+        gap: 20px;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .logo img {
+        width: 40px;
+    }
+
+    .logo-text {
+        font-size: 0.8rem;
+    }
+
+    .main-nav {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header {
+        padding: 5px 0;
+    }
+
+    body {
+        padding-top: 70px;
+    }
+
+    .logo img {
+        width: 40px;
+    }
+
+    .logo-text {
+        font-size: 0.8rem;
+    }
+
+    .nav-links {
+        top: 70px;
+        height: calc(100vh - 70px);
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+        gap: 20px;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .burger.active .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.active .line2 {
+        opacity: 0;
+    }
+
+    .burger.active .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    .logo-text {
+        font-size: 0.9rem;
+    }
+}
